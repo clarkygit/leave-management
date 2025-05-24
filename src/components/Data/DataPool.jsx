@@ -29,14 +29,14 @@ export const dashboardStats = [
 
 
 export const leaveHistory = [
-    { id: 13894, type: 'Paid Time Off', from: 'January 12, 2025', to: 'January 15, 2025', days: '3', comments: '', status: 'Approved' },
-    { id: 40892, type: 'Sick', from: 'March 5, 2025', to: 'March 6, 2025', days: '2', comments: 'Flu symptoms', status: 'Approved' },
-    { id: 94893, type: 'Sick', from: 'May 20, 2025', to: 'May 20, 2025', days: '1', comments: 'Doctor appointment', status: 'Pending' },
-    { id: 40943, type: 'Paid Time Off', from: 'July 1, 2025', to: 'July 5, 2025', days: '5', comments: 'Summer break', status: 'Pending' },
-    { id: 18975, type: 'Vacation', from: 'December 20, 2024', to: 'January 5, 2025', days: '12', comments: 'Holiday season', status: 'Approved' },
-    { id: 64093, type: 'Paid Time Off', from: 'February 14, 2025', to: 'February 14, 2025', days: '1', comments: 'Personal day', status: 'Rejected' },
-    { id: 83729, type: 'Paid Time Off', from: 'April 7, 2025', to: 'April 11, 2025', days: '5', comments: '', status: 'Approved' },
-    { id: 29833, type: 'Sick', from: 'November 15, 2024', to: 'November 18, 2024', days: '3', comments: 'COVID recovery', status: 'Approved' },
-    { id: 90990, type: 'Vacation', from: 'August 23, 2025', to: 'September 5, 2025', days: '14', comments: 'European trip', status: 'Pending' },
-    { id: 67281, type: 'Bereavement', from: 'June 10, 2025', to: 'June 12, 2025', days: '3', comments: 'Family funeral', status: 'Approved' }
+    { id: 13894, type: 'Paid Time Off', from: new Date('2025-01-12'), to: new Date('2025-01-15'), days: 3, comments: '', status: 'Approved' },
+    { id: 40892, type: 'Sick', from: new Date('2025-03-05'), to: new Date('2025-03-06'), days: 2, comments: 'Flu symptoms', status: 'Approved' },
+    { id: 94893, type: 'Sick', from: new Date('2025-05-20'), to: new Date('2025-05-20'), days: 1, comments: 'Doctor appointment', status: 'Pending' },
+    { id: 40943, type: 'Paid Time Off', from: new Date('2025-07-01'), to: new Date('2025-07-05'), days: 5, comments: 'Summer break', status: 'Pending' },
+    { id: 18975, type: 'Vacation', from: new Date('2024-12-20'), to: new Date('2025-01-05'), days: 12, comments: 'Holiday season', status: 'Approved' },
+    { id: 64093, type: 'Paid Time Off', from: new Date('2025-02-14'), to: new Date('2025-02-14'), days: 1, comments: 'Personal day', status: 'Rejected' },
+    { id: 83729, type: 'Paid Time Off', from: new Date('2025-04-07'), to: new Date('2025-04-11'), days: 5, comments: '', status: 'Approved' },
+    { id: 29833, type: 'Sick', from: new Date('2024-11-15'), to: new Date('2024-11-18'), days: 3, comments: 'COVID recovery', status: 'Approved' },
+    { id: 90990, type: 'Vacation', from: new Date('2025-08-23'), to: new Date('2025-09-05'), days: 14, comments: 'European trip', status: 'Pending' },
+    { id: 67281, type: 'Bereavement', from: new Date('2025-06-10'), to: new Date('2025-06-12'), days: 3, comments: 'Family funeral', status: 'Approved' }
 ];

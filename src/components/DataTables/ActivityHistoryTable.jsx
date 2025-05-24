@@ -21,6 +21,7 @@ export default function ActivityHistoryTable(){
             width: 160,
             editable: false,
             resizable: false,
+            type: 'date',
         },
         {
             field: 'to',
@@ -28,6 +29,7 @@ export default function ActivityHistoryTable(){
             width: 160,
             editable: false,
             resizable: false,
+            type: 'date'
         },
         {
             field: 'days',

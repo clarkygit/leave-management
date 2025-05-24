@@ -12,10 +12,12 @@ export default function MuiTable({columns, rows}){
             
                 sx={{
                     border:'none',
-                    '& .MuiDataGrid-columnHeader': { backgroundColor: '#f9fbfc',},
-                    '& .MuiDataGrid-columnSeparator': { visibility: 'hidden',},
-                    '& .MuiDataGrid-cell':{ color: '#555555',},
-                    '& .MuiDataGrid-cell:focus':{ outline: 'none',}
+                    '& .MuiDataGrid-columnHeader': { backgroundColor: '#f9fbfc'},
+                    '& .MuiDataGrid-columnHeader:focus': { outline: 'none'},
+                    '& .MuiDataGrid-columnHeader:focus-within': { outline: 'none'},
+                    '& .MuiDataGrid-columnSeparator': { visibility: 'hidden'},
+                    '& .MuiDataGrid-cell':{ color: '#555555'},
+                    '& .MuiDataGrid-cell:focus':{ outline: 'none'}
                 }}
             />
         </div>
