@@ -29,7 +29,7 @@ export const dashboardStats = [
 
 
 export const leaveHistory = [
-    { id: 13894, type: 'Paid Time Off', from: 'January 12, 2025', to: 'January 15, 2025', days: '3', comments: 'Family vacation', status: 'Approved' },
+    { id: 13894, type: 'Paid Time Off', from: 'January 12, 2025', to: 'January 15, 2025', days: '3', comments: '', status: 'Approved' },
     { id: 40892, type: 'Sick', from: 'March 5, 2025', to: 'March 6, 2025', days: '2', comments: 'Flu symptoms', status: 'Approved' },
     { id: 94893, type: 'Sick', from: 'May 20, 2025', to: 'May 20, 2025', days: '1', comments: 'Doctor appointment', status: 'Pending' },
     { id: 40943, type: 'Paid Time Off', from: 'July 1, 2025', to: 'July 5, 2025', days: '5', comments: 'Summer break', status: 'Pending' },
