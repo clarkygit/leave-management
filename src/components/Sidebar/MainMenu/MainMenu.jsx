@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { MainMenuData } from "./MainMenuData"
+import { MainMenuData } from "../../Data/DataPool"
 
 export default function MainMenu(){
     return(
