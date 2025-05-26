@@ -2,7 +2,6 @@ import { useState } from 'react';
 import PageTitle from './PageTitle'
 import Profile from "./Profile"
 import NewApplicationBtn from './NewApplicationBtn';
-import NewApplication from '../NewApplication';
 
 export default function Header(){
 
@@ -15,7 +14,6 @@ export default function Header(){
 
                 <div className="flex items-center"> {/* RIGHT SIDE */}
                     <NewApplicationBtn />
-                    {/* <button onClick={() => openModal(<NewApplication/>)}>BUTTON</button>  */}
                     <Profile/>
                 </div>
             </div>
