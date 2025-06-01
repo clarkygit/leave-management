@@ -1,7 +1,9 @@
 
 
 export default function Modal({ children, onClose }) {
-  
+
+  //const closeModal = useContext(openModalContext)
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Overlay - Dark Section */}

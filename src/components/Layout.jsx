@@ -16,7 +16,7 @@ export default function Layout(){
 
     return(
         <>
-            <openModalContext.Provider value={{openModal}}> {/* PASS OPEN MODAL VARIABLE TO NESTED COMPONENTS */}
+            <openModalContext.Provider value={{openModal, closeModal}}> {/* PASS OPEN MODAL VARIABLE TO NESTED COMPONENTS */}
                 <div className='flex h-screen w-screen'>
                     <div>
                         <Sidebar/>
