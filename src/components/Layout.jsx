@@ -28,13 +28,13 @@ export default function Layout(){
                         <Footer/>
                     </div>
                 </div>
-            </openModalContext.Provider>
 
-            {modalContent && (
+                {modalContent && (
                 <Modal onClose={closeModal}>
                     {modalContent}
                 </Modal>
             )}
+            </openModalContext.Provider>
         </>
     )
 }
