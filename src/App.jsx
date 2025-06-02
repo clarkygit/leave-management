@@ -4,6 +4,7 @@ import './App.css'
 import Layout from './components/Layout'
 import Dashboard from './components/Dashboard/Dashboard'
 
+
 function App() {
   const location = useLocation(); {/* USED BY ROUTES */}
 

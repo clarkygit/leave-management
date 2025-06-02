@@ -5,7 +5,8 @@ import Sidebar from './Sidebar/Sidebar';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 
-export const openModalContext = createContext();
+
+export const modalContext = createContext();
 
 export default function Layout(){
 
@@ -16,7 +17,7 @@ export default function Layout(){
 
     return(
         <>
-            <openModalContext.Provider value={{openModal, closeModal}}> {/* PASS OPEN MODAL VARIABLE TO NESTED COMPONENTS */}
+            <modalContext.Provider value={{openModal, closeModal}}> {/* PASS OPEN MODAL VARIABLE TO NESTED COMPONENTS */}
                 <div className='flex h-screen w-screen'>
                     <div>
                         <Sidebar/>
@@ -30,11 +31,11 @@ export default function Layout(){
                 </div>
 
                 {modalContent && (
-                <Modal onClose={closeModal}>
-                    {modalContent}
-                </Modal>
-            )}
-            </openModalContext.Provider>
+                    <Modal onClose={closeModal}>
+                        {modalContent}
+                    </Modal>
+                )}
+            </modalContext.Provider>
         </>
     )
 }

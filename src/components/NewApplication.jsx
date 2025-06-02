@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import openModalContext from './Layout'
+import { useContext } from 'react';
+import {modalContext}from './Layout'
 
 
   const handleSubmit = (e) => {
@@ -9,9 +9,7 @@ import openModalContext from './Layout'
 
 
   export default function NewApplication() {
-
-
-    const closeModal = useContext(openModalContext)
+    const {closeModal} = useContext(modalContext);
 
     return (
       <>
@@ -50,7 +48,7 @@ import openModalContext from './Layout'
             </div>
             <div className='flex'> {/* BUTTONS */}
               <button className='px-4 py-2 rounded-xl uppercase cursor-pointer bg-teal-500 text-white mr-10'>Submit</button>
-              <button onClick={(e) =>{e.stopPropagation; closeModal}} className='px-4 py-2 rounded-xl uppercase cursor-pointer bg-teal-500 text-white mr-10'>Cancel</button>
+              <button onClick={closeModal} className='px-4 py-2 rounded-xl uppercase cursor-pointer bg-teal-500 text-white mr-10'>Cancel</button>
             </div>
           </form>
       </>
