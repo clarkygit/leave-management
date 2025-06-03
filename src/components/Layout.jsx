@@ -5,7 +5,6 @@ import Sidebar from './Sidebar/Sidebar';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 
-
 export const modalContext = createContext();
 
 export default function Layout(){
@@ -31,7 +30,7 @@ export default function Layout(){
                 </div>
 
                 {modalContent && (
-                    <Modal onClose={closeModal}>
+                    <Modal>
                         {modalContent}
                     </Modal>
                 )}

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import {modalContext}from './Layout'
+import { modalContext } from './Layout'
 
 
   const handleSubmit = (e) => {
