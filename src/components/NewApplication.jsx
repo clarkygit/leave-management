@@ -48,7 +48,7 @@ import {modalContext}from './Layout'
             </div>
             <div className='flex'> {/* BUTTONS */}
               <button className='px-4 py-2 rounded-xl uppercase cursor-pointer bg-teal-500 text-white mr-10'>Submit</button>
-              <button onClick={closeModal} className='px-4 py-2 rounded-xl uppercase cursor-pointer bg-teal-500 text-white mr-10'>Cancel</button>
+              <button onClick={(e) => {e.stopPropagation(); closeModal()}} className='px-4 py-2 rounded-xl uppercase cursor-pointer bg-teal-500 text-white mr-10'>Cancel</button>
             </div>
           </form>
       </>
