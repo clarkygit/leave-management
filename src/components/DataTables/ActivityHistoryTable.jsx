@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import MuiTable from "./MuiTable";
 import { leaveHistory } from "../Data/DataPool";
 
@@ -9,27 +11,27 @@ export default function ActivityHistoryTable(){
           resizable: false,
         },
         {
-            field: 'type',
+            field: 'leaveType',
             headerName: 'Leave Type',
             width: 150,
             editable: false,
             resizable: false,
         },
         {
-            field: 'from',
+            field: 'leaveStartDate',
             headerName: 'From',
             width: 160,
             editable: false,
             resizable: false,
-            type: 'date',
+            //type: 'date'
         },
         {
-            field: 'to',
+            field: 'leaveEndDate',
             headerName: 'To',
             width: 160,
             editable: false,
             resizable: false,
-            type: 'date'
+            //type: 'date'
         },
         {
             field: 'days',
@@ -41,7 +43,7 @@ export default function ActivityHistoryTable(){
             resizable: false,
         },
         {
-            field: 'comments',
+            field: 'comment',
             headerName: 'Comments',
             width: 350,
             editable: false,
@@ -73,10 +75,30 @@ export default function ActivityHistoryTable(){
         },
         ];
 
+    const [rows, setRows] = useState([]);
+
+    useEffect(() => {
+        axios
+        .get("http://localhost:5000/api/leaves")
+        .then((res) => {
+            const formattedRows = res.data.map((leave) => ({
+                id: leave._id,
+                leaveType: leave.leaveType,
+                leaveStartDate: leave.leaveStartDate,
+                leaveEndDate: leave.leaveEndDate,
+                comment: leave.comment || "—",
+                status: leave.status,
+            }));
+            setRows(formattedRows);
+            console.log(res.data)
+        })
+        .catch((err) => console.error("Error fetching leaves:", err));
+    }, []);
 
     return(
         <>
-            <MuiTable columns={columns} rows={leaveHistory} />
+            {/* <MuiTable columns={columns} rows={leaveHistory} /> */}
+            <MuiTable columns={columns} rows={rows} />
         </>
     )
 }

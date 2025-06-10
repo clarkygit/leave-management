@@ -3,28 +3,34 @@ import { modalContext } from './Layout'
 import api from '../api/axios';
 
 
-
   export default function NewApplication() {
     const {closeModal} = useContext(modalContext);
 
+    //USESTATE ARRAY FOR LEAVE INFO
     const [leaveInfo, setLeaveInfo] = useState({
       leaveType: '',
       leaveStartDate: '',
       leaveEndDate: '',
       comment: '',
+      status: 'Pending',
     });
 
+
+    //TEMPORARILY STORE LEAVE INFO
     const handleInputChange = (e) => {
       setLeaveInfo({ ...leaveInfo, [e.target.name]: e.target.value });
       console.log(leaveInfo);
     };
 
+    //HANDLE SUBMIT
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
         await api.post('/leaves', leaveInfo);
         setLeaveInfo({ leaveType: '', startDate: '', endDate: '', comment: '' });
-        onAdded(); // Notify parent to refresh table
+        console.log("Sucess")
+        closeModal();
+        //onAdded(); // Notify parent to refresh table
       } catch (err) {
         console.error('Failed to submit leave:', err);
       }

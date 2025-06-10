@@ -4,7 +4,7 @@ const leaveRequestSchema = new mongoose.Schema({
   leaveType: { type: String, required: true },
   leaveStartDate: { type: Date, required: true },
   leaveEndDate: { type: Date, required: true },
-  comment: { type: String, required: true },
+  comment: { type: String, required: false },
   status: {
     type: String,
     enum: ['Pending', 'Approved', 'Rejected'],
